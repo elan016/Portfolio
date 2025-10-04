@@ -1,27 +1,24 @@
 
 [
   {
-    "title": "Netflix Clone",
-    "description": "A fully responsive web application that replicates the core features of Netflix, built with React, Styled Components, and Firebase for the backend.",
-    "tags": ["React", "Styled Components", "Firebase"],
-    "image": "project-1",
-    "githubUrl": "https://github.com/Elan026/Netflix-clone",
-    "liveUrl": "https://netflix-clone-elan.netlify.app/"
+    "title": "Speech-to-Text Web Application",
+    "description": "Converts live speech to text, with deep learning model improvements for accuracy. Built with Flask and the WebSpeech API.",
+    "tags": ["Flask", "WebSpeech API", "Python", "Deep Learning"],
+    "githubUrl": "",
+    "liveUrl": "https://elan.ds"
   },
   {
-    "title": "Eccomerce Website",
-    "description": "A complete e-commerce platform developed with the MERN stack (MongoDB, Express, React, Node.js) and integrated with the Stripe payment gateway.",
-    "tags": ["MERN Stack", "Stripe", "E-commerce"],
-    "image": "project-2",
-    "githubUrl": "https://github.com/Elan026/Mern-stack-eccomerce-website",
-    "liveUrl": "https://mern-stack-eccomerce.netlify.app/"
+    "title": "Plate Vision: ALPR",
+    "description": "An end-to-end detection pipeline for license plates using YOLOv5 for object detection and a custom CNN for optical character recognition.",
+    "tags": ["YOLOv5", "CNN", "Flask", "Python", "OCR"],
+    "githubUrl": "",
+    "liveUrl": ""
   },
   {
-    "title": "Food Delivery App",
-    "description": "A food delivery application created using the MERN stack, offering a seamless user experience for ordering food from various restaurants.",
-    "tags": ["MERN Stack", "Food Delivery"],
-    "image": "project-3",
-    "githubUrl": "https://github.com/Elan026/Mern-Food-delivery-app",
-    "liveUrl": "https://food-delivery-elan.netlify.app/"
+    "title": "AI-Based M-Sand Quality Monitoring",
+    "description": "Classifies M-Sand quality from images using a custom CNN model. Features a React frontend and a Flask backend.",
+    "tags": ["React", "Flask", "CNN", "Computer Vision"],
+    "githubUrl": "",
+    "liveUrl": ""
   }
 ]

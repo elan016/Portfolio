@@ -5,8 +5,9 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const navLinks = [
   { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
+  { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
+  { href: '#skills', label: 'Skills' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -16,7 +17,7 @@ export function Header() {
       <div className="container flex h-16 items-center">
         <Link href="/" className="flex items-center space-x-2 mr-auto">
           <Code2 className="h-6 w-6" />
-          <span className="font-bold">Elansuriyan</span>
+          <span className="font-bold">Elango Kandhasamy</span>
         </Link>
         <nav className="hidden md:flex items-center justify-center gap-4 lg:gap-6 text-sm">
           {navLinks.map((link) => (
@@ -29,7 +30,12 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="flex items-center justify-end md:hidden ml-auto">
+        <div className="flex-1 flex justify-end">
+           <Button asChild>
+              <Link href="#contact">Get in touch</Link>
+            </Button>
+        </div>
+        <div className="flex items-center justify-end md:hidden ml-4">
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
@@ -41,7 +47,7 @@ export function Header() {
               <nav className="grid gap-6 text-lg font-medium mt-8">
                 <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4">
                   <Code2 className="h-6 w-6" />
-                  <span className="sr-only">Elansuriyan</span>
+                  <span className="sr-only">Elango Kandhasamy</span>
                 </Link>
                 {navLinks.map((link) => (
                   <Link

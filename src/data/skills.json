@@ -1,13 +1,31 @@
 
-[
-  { "name": "HTML" },
-  { "name": "CSS" },
-  { "name": "JavaScript" },
-  { "name": "React" },
-  { "name": "Node.Js" },
-  { "name": "Express.Js" },
-  { "name": "MongoDB" },
-  { "name": "Firebase" },
-  { "name": "Redux" },
-  { "name": "Git" }
-]
+{
+    "skills": [
+        {
+            "category": "Languages",
+            "skills": ["Python", "Java", "JavaScript", "SQL"]
+        },
+        {
+            "category": "Machine Learning / Deep Learning",
+            "skills": ["TensorFlow", "Keras", "PyTorch", "OpenCV", "scikit-learn", "YOLOv5", "LangChain"]
+        },
+        {
+            "category": "Web & DB / Backend & Frameworks",
+            "skills": ["Flask", "FastAPI", "React", "Express", "Node", "PostgreSQL", "MongoDB", "Django", "Streamlit"]
+        },
+        {
+            "category": "Tools / Infrastructure",
+            "skills": ["Git/GitHub", "Docker", "Replit", "n8n", "CrewAI", "Hugging Face", "AWS", "Heroku"]
+        },
+        {
+            "category": "Business Intelligence",
+            "skills": ["Power BI", "Tableau"]
+        }
+    ],
+    "otherActivities": [
+        "Innovation Day Winner — 3rd Place",
+        "Organizer for Film Workshop 2025 (70+ participants)",
+        "Joint Secretary — Cultural Club (2025–26)",
+        "Interests: football, art & poster designing"
+    ]
+}
