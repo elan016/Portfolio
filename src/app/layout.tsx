@@ -52,7 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn('dark', inter.variable, poppins.variable)}>
-      <body className="font-body antialiased bg-background text-foreground">
+      <body className="font-body antialiased bg-background text-foreground overflow-x-hidden">
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-1">{children}</main>
