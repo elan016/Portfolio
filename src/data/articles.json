@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Mastering CI/CD Pipelines with Jenkins and Docker",
+    "publication": "DevOps Weekly",
+    "date": "2023-10-15",
+    "url": "#",
+    "image": "article-1"
+  },
+  {
+    "title": "A Deep Dive into Kubernetes Networking",
+    "publication": "The New Stack",
+    "date": "2023-08-22",
+    "url": "#",
+    "image": "article-2"
+  },
+  {
+    "title": "Serverless Architecture on AWS: A Practical Guide",
+    "publication": "Medium",
+    "date": "2023-05-30",
+    "url": "#",
+    "image": "article-3"
+  }
+]

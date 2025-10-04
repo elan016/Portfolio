@@ -1,0 +1,20 @@
+[
+  {
+    "name": "AWS Certified Developer - Associate",
+    "issuer": "Amazon Web Services",
+    "date": "Issued 2023",
+    "image": "cert-aws"
+  },
+  {
+    "name": "Certified Kubernetes Administrator (CKA)",
+    "issuer": "The Linux Foundation",
+    "date": "Issued 2022",
+    "image": "cert-k8s"
+  },
+  {
+    "name": "Professional Cloud Architect",
+    "issuer": "Google Cloud",
+    "date": "Issued 2023",
+    "image": "cert-gcp"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Project TerraForm",
+    "description": "An infrastructure-as-code deployment system for multi-cloud environments, enhancing scalability and reducing manual setup by 90%.",
+    "tags": ["Terraform", "AWS", "GCP", "CI/CD"],
+    "image": "project-1",
+    "url": "#"
+  },
+  {
+    "title": "KubeFlow Master",
+    "description": "A streamlined machine learning pipeline orchestrator on Kubernetes, enabling faster model training and deployment cycles for data science teams.",
+    "tags": ["Kubernetes", "Docker", "Python", "MLOps"],
+    "image": "project-2",
+    "url": "#"
+  },
+  {
+    "title": "Nexus Dashboard",
+    "description": "A real-time monitoring and analytics dashboard for microservices, providing deep insights into application performance and health.",
+    "tags": ["React", "Node.js", "Prometheus", "Grafana"],
+    "image": "project-3",
+    "url": "#"
+  }
+]
