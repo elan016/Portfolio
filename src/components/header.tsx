@@ -15,11 +15,11 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <Link href="/" className="flex items-center space-x-2 mr-auto">
+        <Link href="/" className="flex items-center space-x-2">
           <Code2 className="h-6 w-6" />
           <span className="font-bold">Elango Kandhasamy</span>
         </Link>
-        <nav className="hidden md:flex items-center justify-around flex-1 text-sm">
+        <nav className="hidden md:flex items-center justify-center flex-1 space-x-8 text-sm">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -30,7 +30,7 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="flex-1 flex justify-end">
+        <div className="flex items-center justify-end" style={{minWidth: '130px'}}>
            <Button asChild>
               <Link href="#contact">Get in touch</Link>
             </Button>
