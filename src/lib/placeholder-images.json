@@ -2,57 +2,21 @@
   "placeholderImages": [
     {
       "id": "project-1",
-      "description": "Placeholder for Project 1",
-      "imageUrl": "https://images.unsplash.com/photo-1445620466293-d6316372ab59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0ZWNoJTIwY29kZXxlbnwwfHx8fDE3NTk1MTU5Mjh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "tech code"
+      "description": "Placeholder for Netflix Clone Project",
+      "imageUrl": "https://images.unsplash.com/photo-1616469829935-c2f334624b38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3ZpZSUyMHBvc3RlcnN8ZW58MHx8fHwxNjYwNzU0MDY0&ixlib=rb-1.2.1&q=80&w=1080",
+      "imageHint": "movie posters"
     },
     {
       "id": "project-2",
-      "description": "Placeholder for Project 2",
-      "imageUrl": "https://images.unsplash.com/photo-1639094091546-c7efccbaf568?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMHNlcnZlcnxlbnwwfHx8fDE3NTk1NzQ3NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "abstract server"
+      "description": "Placeholder for E-commerce Website Project",
+      "imageUrl": "https://images.unsplash.com/photo-1555529771-835f59fc5efe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNDE5ODJ8MHwxfHNlYXJjaHwxfHxvbmxpbmUlMjBzaG9wcGluZ3xlbnwwfHx8fDE2NjA3NTQwOTU&ixlib=rb-1.2.1&q=80&w=1080",
+      "imageHint": "online shopping"
     },
     {
       "id": "project-3",
-      "description": "Placeholder for Project 3",
-      "imageUrl": "https://images.unsplash.com/photo-1758899063445-acaa710ac317?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc1OTUwMzI0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "modern dashboard"
-    },
-    {
-      "id": "article-1",
-      "description": "Placeholder for Article 1",
-      "imageUrl": "https://images.unsplash.com/photo-1758483225016-fa0c271e36af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3cml0aW5nJTIwa2V5Ym9hcmR8ZW58MHx8fHwxNzU5NDk4NDU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "writing keyboard"
-    },
-    {
-      "id": "article-2",
-      "description": "Placeholder for Article 2",
-      "imageUrl": "https://images.unsplash.com/photo-1738082956220-a1f20a8632ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bmV0d29yayUyMG5vZGVzfGVufDB8fHx8MTc1OTUzNzM4MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "network nodes"
-    },
-    {
-      "id": "article-3",
-      "description": "Placeholder for Article 3",
-      "imageUrl": "https://images.unsplash.com/photo-1529126894674-8dd7cb884766?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2xvdWQlMjBkYXRhfGVufDB8fHx8MTc1OTUzNjA1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cloud data"
-    },
-    {
-      "id": "cert-aws",
-      "description": "AWS Certified Developer",
-      "imageUrl": "https://images.unsplash.com/photo-1692372374563-9ab54f303b7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjbG91ZCUyMGxvZ298ZW58MHx8fHwxNzU5NTY5NDIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cloud logo"
-    },
-    {
-      "id": "cert-k8s",
-      "description": "Certified Kubernetes Administrator",
-      "imageUrl": "https://images.unsplash.com/photo-1669625408218-8b81bdc2930b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb250YWluZXIlMjBsb2dvfGVufDB8fHx8MTc1OTU3NDc0MXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "container logo"
-    },
-    {
-      "id": "cert-gcp",
-      "description": "Google Cloud Professional",
-      "imageUrl": "https://images.unsplash.com/photo-1724994727393-1040b798a228?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbG91ZCUyMHNlcnZpY2V8ZW58MHx8fHwxNzU5NTc0NzQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cloud service"
+      "description": "Placeholder for Food Delivery App Project",
+      "imageUrl": "https://images.unsplash.com/photo-1594179047514-9b4d1b0d0e77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNDE5ODJ8MHwxfHNlYXJjaHwxfHxmb29kJTIwZGVsaXZlcnl8ZW58MHx8fHwxNjYwNzU0MTI0&ixlib=rb-1.2.1&q=80&w=1080",
+      "imageHint": "food delivery"
     }
   ]
 }

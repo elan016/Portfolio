@@ -1,23 +1,27 @@
+
 [
   {
-    "title": "Project TerraForm",
-    "description": "An infrastructure-as-code deployment system for multi-cloud environments, enhancing scalability and reducing manual setup by 90%.",
-    "tags": ["Terraform", "AWS", "GCP", "CI/CD"],
+    "title": "Netflix Clone",
+    "description": "A fully responsive web application that replicates the core features of Netflix, built with React, Styled Components, and Firebase for the backend.",
+    "tags": ["React", "Styled Components", "Firebase"],
     "image": "project-1",
-    "url": "#"
+    "githubUrl": "https://github.com/Elan026/Netflix-clone",
+    "liveUrl": "https://netflix-clone-elan.netlify.app/"
   },
   {
-    "title": "KubeFlow Master",
-    "description": "A streamlined machine learning pipeline orchestrator on Kubernetes, enabling faster model training and deployment cycles for data science teams.",
-    "tags": ["Kubernetes", "Docker", "Python", "MLOps"],
+    "title": "Eccomerce Website",
+    "description": "A complete e-commerce platform developed with the MERN stack (MongoDB, Express, React, Node.js) and integrated with the Stripe payment gateway.",
+    "tags": ["MERN Stack", "Stripe", "E-commerce"],
     "image": "project-2",
-    "url": "#"
+    "githubUrl": "https://github.com/Elan026/Mern-stack-eccomerce-website",
+    "liveUrl": "https://mern-stack-eccomerce.netlify.app/"
   },
   {
-    "title": "Nexus Dashboard",
-    "description": "A real-time monitoring and analytics dashboard for microservices, providing deep insights into application performance and health.",
-    "tags": ["React", "Node.js", "Prometheus", "Grafana"],
+    "title": "Food Delivery App",
+    "description": "A food delivery application created using the MERN stack, offering a seamless user experience for ordering food from various restaurants.",
+    "tags": ["MERN Stack", "Food Delivery"],
     "image": "project-3",
-    "url": "#"
+    "githubUrl": "https://github.com/Elan026/Mern-Food-delivery-app",
+    "liveUrl": "https://food-delivery-elan.netlify.app/"
   }
 ]

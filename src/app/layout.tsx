@@ -19,13 +19,13 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Midnight Portfolio | Sayed',
-  description: 'A modern, dark-themed portfolio showcasing projects, articles, and expertise in web development and DevOps.',
+  title: 'Elansuriyan | Full-Stack Developer',
+  description: 'A passionate Full-Stack Web Developer with a knack for creating dynamic and responsive web applications.',
   openGraph: {
-    title: 'Midnight Portfolio | Sayed',
-    description: 'A modern, dark-themed portfolio showcasing projects, articles, and expertise in web development and DevOps.',
+    title: 'Elansuriyan | Full-Stack Developer',
+    description: 'A passionate Full-Stack Web Developer with a knack for creating dynamic and responsive web applications.',
     url: 'https://your-domain.com', // Replace with your actual domain
-    siteName: 'Midnight Portfolio',
+    siteName: 'Elansuriyan Portfolio',
     images: [
       {
         url: 'https://picsum.photos/seed/og-image/1200/630', // Replace with your actual OG image
@@ -38,9 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Midnight Portfolio | Sayed',
-    description: 'A modern, dark-themed portfolio showcasing projects, articles, and expertise in web development and DevOps.',
-     // create an image for twitter
+    title: 'Elansuriyan | Full-Stack Developer',
+    description: 'A passionate Full-Stack Web Developer with a knack for creating dynamic and responsive web applications.',
     images: ['https://picsum.photos/seed/twitter-image/1200/600'], // Replace with your actual Twitter image
   },
 };
@@ -55,7 +54,7 @@ export default function RootLayout({
       <body className="font-body antialiased bg-background text-foreground overflow-x-hidden">
         <div className="flex flex-col min-h-screen">
           <Header />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 px-4 md:px-6">{children}</main>
           <Footer />
         </div>
         <Toaster />

@@ -1,0 +1,13 @@
+
+[
+  { "name": "HTML" },
+  { "name": "CSS" },
+  { "name": "JavaScript" },
+  { "name": "React" },
+  { "name": "Node.Js" },
+  { "name": "Express.Js" },
+  { "name": "MongoDB" },
+  { "name": "Firebase" },
+  { "name": "Redux" },
+  { "name": "Git" }
+]
