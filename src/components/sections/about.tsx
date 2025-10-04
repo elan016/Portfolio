@@ -11,7 +11,7 @@ export function AboutSection() {
             About Me
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-muted-foreground md:text-xl">
-            I design and build intelligent, scalable applications combining deep learning systems with modern web stacks. My background spans machine learning and full-stack development, with experience in computer vision, NLP, and generative AI. I enjoy shipping production-ready features, mentoring, and translating real-world problems into AI products.
+            I'm an AI Engineer and Software Developer with a love for providing intelligent, scalable and user friendly solutions. I am an expert in machine learning and computer vision, with strong skills in full stack development, integrating data-driven solutions with the latest web technologies to craft products that think and adapt. My main focus is on translating science into AI-driven systems, automating processes, improving decision making and bringing machines to change the real world for better. I focus on connecting AI and software engineering by combining artificial intelligence with cloud deployment, deep learning, NLP technologies to build intelligent solutions which are not just smart but also impeccably seamless, efficient and future-proof!
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

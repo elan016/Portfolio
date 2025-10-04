@@ -12,7 +12,7 @@ export function HeroSection() {
             Elango Kandhasamy
           </h1>
           <p className="mt-6 text-lg text-muted-foreground md:text-xl">
-            AI/ML and Full-Stack Developer specializing in Computer Vision, NLP, and end-to-end product development.
+            AI Engineer & Software Developer building intelligent, scalable, and adaptive digital experiences.
           </p>
           <p className="mt-2 text-md text-muted-foreground">
             Director & CTO at Levroun Enterprise | Pursuing AI & Data Science @ Nandha Engineering College
