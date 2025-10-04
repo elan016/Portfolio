@@ -3,8 +3,7 @@ import { Inter, Poppins } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
-import { Header } from '@/components/header';
-import { Footer } from '@/components/footer';
+import { LayoutWrapper } from '@/components/layout-wrapper';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -52,11 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn('dark', inter.variable, poppins.variable)}>
       <body className="font-body antialiased bg-background text-foreground overflow-x-hidden">
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-1 px-4 md:px-6">{children}</main>
-          <Footer />
-        </div>
+        <LayoutWrapper>{children}</LayoutWrapper>
         <Toaster />
       </body>
     </html>
