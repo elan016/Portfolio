@@ -1,6 +1,5 @@
 import { AnimatedSection } from '@/components/animated-section';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Briefcase } from 'lucide-react';
 
 const experiences = [
     {
@@ -37,8 +36,8 @@ export function ExperienceSection() {
                 <div key={exp.role} className={`md:flex items-center w-full mb-8 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
                     <div className="md:w-5/12"></div>
                     <div className="md:w-2/12 hidden md:flex justify-center">
-                        <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground">
-                            <Briefcase className="w-5 h-5"/>
+                        <div className="w-10 h-10 bg-primary/10 border border-primary/20 rounded-full flex items-center justify-center">
+                           <div className="w-3 h-3 bg-primary rounded-full"></div>
                         </div>
                     </div>
                      <div className="md:w-5/12">
