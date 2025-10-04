@@ -19,7 +19,7 @@ export function Header() {
           <Code2 className="h-6 w-6" />
           <span className="font-bold">Elango Kandhasamy</span>
         </Link>
-        <nav className="hidden md:flex items-center justify-center gap-4 lg:gap-6 text-sm">
+        <nav className="hidden md:flex items-center justify-around flex-1 text-sm">
           {navLinks.map((link) => (
             <Link
               key={link.href}
