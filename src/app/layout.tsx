@@ -51,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn('dark', inter.variable, poppins.variable)}>
-      <body className="font-body antialiased bg-background text-foreground overflow-x-hidden">
+      <body className="font-body antialiased bg-background text-foreground">
         <BackgroundAnimation />
         <LayoutWrapper>{children}</LayoutWrapper>
         <Toaster />
