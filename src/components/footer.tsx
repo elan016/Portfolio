@@ -92,7 +92,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-border/40 pt-8 flex flex-col sm:flex-row items-center justify-between">
-             <p className="text-center text-sm leading-loose text-muted-foreground">
+             <p className="w-full text-center text-sm leading-loose text-muted-foreground sm:w-auto">
                 &copy; {new Date().getFullYear()} elan026.dev
             </p>
             <button 
