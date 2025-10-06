@@ -66,7 +66,7 @@ const icons = [
   ),
 ];
 
-const iconCount = 20;
+const iconCount = 15;
 
 export function BackgroundAnimation() {
   const [isMounted, setIsMounted] = useState(false);
@@ -80,10 +80,10 @@ export function BackgroundAnimation() {
 
     return Array.from({ length: iconCount }).map((_, i) => {
       const Icon = icons[i % icons.length];
-      const size = Math.random() * 60 + 20; // 20px to 80px
+      const size = Math.random() * 60 + 40; // 40px to 100px
       const left = Math.random() * 100; // 0% to 100%
-      const duration = Math.random() * 20 + 15; // 15s to 35s
-      const delay = Math.random() * -20; // -20s to 0s
+      const duration = Math.random() * 30 + 20; // 20s to 50s
+      const delay = Math.random() * -25; // -25s to 0s
 
       return (
         <div
