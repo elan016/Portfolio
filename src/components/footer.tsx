@@ -32,7 +32,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border/40 bg-card/20 py-12 sm:py-16">
-      <div className="container">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
             <div className="sm:col-span-2 lg:col-span-2">
                 <Link href="/" className="flex items-center space-x-2 mb-4">

@@ -7,13 +7,13 @@ import { ExperienceSection } from '@/components/sections/experience';
 
 export default function Home() {
   return (
-    <>
+    <div className="px-4 md:px-6">
       <HeroSection />
       <AboutSection />
       <ExperienceSection />
       <ProjectsSection />
       <SkillsSection />
       <ContactSection />
-    </>
+    </div>
   );
 }
