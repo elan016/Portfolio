@@ -47,9 +47,9 @@ export function ContactForm() {
     },
   });
 
-  const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
-  const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
-  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
+  const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+  const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
