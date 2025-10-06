@@ -4,6 +4,7 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import { LayoutWrapper } from '@/components/layout-wrapper';
+import { BackgroundAnimation } from '@/components/background-animation';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -51,6 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn('dark', inter.variable, poppins.variable)}>
       <body className="font-body antialiased bg-background text-foreground overflow-x-hidden">
+        <BackgroundAnimation />
         <LayoutWrapper>{children}</LayoutWrapper>
         <Toaster />
       </body>
