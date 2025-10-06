@@ -5,9 +5,9 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const navLinks = [
   { href: '#about', label: 'About' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#projects', label: 'Projects' },
   { href: '#skills', label: 'Skills' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#experience', label: 'Experience' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -19,7 +19,7 @@ export function Header() {
           <Code2 className="h-6 w-6" />
           <span className="font-bold">Elango Kandhasamy</span>
         </Link>
-        <nav className="hidden md:flex items-center justify-center flex-1 space-x-8 text-sm">
+        <nav className="hidden md:flex items-center justify-center flex-1 space-x-8 text-sm font-medium">
           {navLinks.map((link) => (
             <Link
               key={link.href}
