@@ -4,24 +4,24 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* white */
-    --foreground: 0 0% 13%; /* near black */
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 13%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 13%;
-    --primary: 251 79% 60%; /* #6049ea */
+    --background: 0 0% 0%; /* #000000 */
+    --foreground: 0 0% 100%; /* #ffffff */
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 251 79% 60%; /* #6049ea - purple */
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
     --accent: 251 79% 60%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
     --ring: 251 79% 60%;
     --radius: 1.125rem;
     --chart-1: 12 76% 61%;
@@ -87,28 +87,55 @@
     @apply fixed top-0 left-0 w-full h-full -z-10 overflow-hidden pointer-events-none;
   }
 
-  .icon-float {
-    @apply absolute;
-    opacity: 0.1;
-    animation: float-up linear infinite;
+  @keyframes animStar {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-2000px);
+    }
   }
 
-  .icon-float svg {
-    width: 100%;
-    height: 100%;
+  #stars {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: 
+      /* A whole bunch of stars */
+      1589px 1386px #FFF, 1228px 1278px #FFF, 1633px 1863px #FFF, 1515px 537px #FFF, 381px 1353px #FFF,
+      869px 1583px #FFF, 1530px 108px #FFF, 1028px 26px #FFF, 502px 1478px #FFF, 1535px 1195px #FFF,
+      1269px 1289px #FFF, 1726px 1324px #FFF, 1146px 1568px #FFF, 128px 1184px #FFF, 24px 1774px #FFF,
+      1383px 1828px #FFF, 853px 899px #FFF, 1421px 1827px #FFF, 1580px 1709px #FFF, 219px 789px #FFF,
+      1429px 163px #FFF, 23px 1716px #FFF, 1785px 182px #FFF, 1431px 100px #FFF, 1141px 1999px #FFF,
+      561px 1133px #FFF, 1932px 1019px #FFF, 1528px 116px #FFF, 1949px 1238px #FFF, 1546px 1648px #FFF,
+      1589px 428px #FFF, 1139px 74px #FFF, 145px 339px #FFF, 1699px 1198px #FFF, 1829px 1729px #FFF,
+      1653px 1294px #FFF, 736px 1177px #FFF, 1591px 1824px #FFF, 1373px 1585px #FFF, 1836px 1888px #FFF;
+    animation: animStar 50s linear infinite;
   }
-
-  @keyframes float-up {
-    0% {
-      transform: translateY(100vh) scale(0.5);
-      opacity: 0;
-    }
-    10%, 90% {
-      opacity: 0.15;
-    }
-    100% {
-      transform: translateY(-10vh) scale(1);
-      opacity: 0;
-    }
+  
+  #stars2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow:
+      /* A whole bunch of stars */
+      1383px 1828px #FFF, 853px 899px #FFF, 1421px 1827px #FFF, 1580px 1709px #FFF, 219px 789px #FFF,
+      1429px 163px #FFF, 23px 1716px #FFF, 1785px 182px #FFF, 1431px 100px #FFF, 1141px 1999px #FFF,
+      561px 1133px #FFF, 1932px 1019px #FFF, 1528px 116px #FFF, 1949px 1238px #FFF, 1546px 1648px #FFF,
+      1589px 428px #FFF, 1139px 74px #FFF, 145px 339px #FFF, 1699px 1198px #FFF, 1829px 1729px #FFF,
+      489px 692px #FFF, 163px 1100px #FFF, 1439px 28px #FFF, 1118px 461px #FFF, 1799px 490px #FFF;
+    animation: animStar 100s linear infinite;
+  }
+  
+  #stars3 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow:
+      /* A whole bunch of stars */
+      1589px 428px #FFF, 1139px 74px #FFF, 145px 339px #FFF, 1699px 1198px #FFF, 1829px 1729px #FFF,
+      489px 692px #FFF, 163px 1100px #FFF, 1439px 28px #FFF, 1118px 461px #FFF, 1799px 490px #FFF,
+      1265px 1845px #FFF, 1425px 446px #FFF, 848px 1583px #FFF, 120px 143px #FFF, 1056px 1201px #FFF;
+    animation: animStar 150s linear infinite;
   }
 }
