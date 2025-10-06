@@ -1,3 +1,5 @@
+'use client';
+
 import { Code2, Github, Linkedin, Mail, Phone, ArrowUp } from 'lucide-react';
 import Link from 'next/link';
 
@@ -20,23 +22,25 @@ const expertise = [
 export function Footer() {
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    if (typeof window !== 'undefined') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
     <footer className="border-t border-border/40 bg-card/20 py-12 sm:py-16">
       <div className="container">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-5">
-            <div className="md:col-span-4 lg:col-span-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+            <div className="sm:col-span-2 lg:col-span-2">
                 <Link href="/" className="flex items-center space-x-2 mb-4">
                     <Code2 className="h-7 w-7" />
                     <span className="font-bold text-xl">Elango Kandhasamy</span>
                 </Link>
                  <p className="text-muted-foreground text-sm max-w-xs">
-                    AI Engineer and Software Developer building intelligent, scalable, and adaptive digital experiences.
+                    AI Engineer and Software Developer crafting intelligent, scalable, and adaptive digital experiences that bridge the gap between human and machine.
                 </p>
             </div>
 
