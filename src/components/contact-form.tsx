@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import emailjs from '@emailjs/browser';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -36,6 +36,7 @@ const formSchema = z.object({
 export function ContactForm() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -46,33 +47,41 @@ export function ContactForm() {
     },
   });
 
+  const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+  const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
+
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
+    
+    if (!serviceId || !templateId || !publicKey) {
+        toast({
+            variant: 'destructive',
+            title: 'Configuration Error',
+            description: 'The email service is not configured correctly. Please contact the site administrator.',
+        });
+        setIsSubmitting(false);
+        return;
+    }
 
-    const serviceId = 'service_yg2bisi';
-    const templateId = 'template_n22es2j';
-    const publicKey = 'VIyCuMK9bOHwPWw0V';
-
-    const templateParams = {
-      from_name: values.name,
-      from_email: values.email,
-      to_name: 'Elango Kandhasamy',
-      message: values.message,
-    };
+    if (!formRef.current) {
+        setIsSubmitting(false);
+        return;
+    }
 
     try {
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      await emailjs.sendForm(serviceId, templateId, formRef.current, publicKey);
       toast({
         title: 'Message Sent!',
         description: "Thanks for reaching out. I'll get back to you soon.",
       });
       form.reset();
-    } catch (error) {
+    } catch (error: any) {
       console.error('EmailJS error:', error);
       toast({
         variant: 'destructive',
         title: 'Uh oh! Something went wrong.',
-        description: 'There was a problem sending your message. Please try again later.',
+        description: `There was a problem sending your message. Error: ${error?.text || 'Unknown error'}`,
       });
     } finally {
       setIsSubmitting(false);
@@ -89,7 +98,7 @@ export function ContactForm() {
       </CardHeader>
       <CardContent>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
               control={form.control}
               name="name"
@@ -97,7 +106,7 @@ export function ContactForm() {
                 <FormItem>
                   <FormLabel>Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your Name" {...field} />
+                    <Input placeholder="Your Name" {...field} name="from_name" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -110,7 +119,7 @@ export function ContactForm() {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="your.email@example.com" {...field} />
+                    <Input placeholder="your.email@example.com" {...field} name="from_email"/>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -127,12 +136,14 @@ export function ContactForm() {
                       placeholder="Your message..."
                       className="resize-none"
                       {...field}
+                      name="message"
                     />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
+             <input type="hidden" name="to_name" value="Elango Kandhasamy" />
             <Button type="submit" className="w-full" disabled={isSubmitting}>
               {isSubmitting ? (
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
