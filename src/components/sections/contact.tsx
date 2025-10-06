@@ -64,7 +64,7 @@ export function ContactSection() {
                         <CardTitle>Connect With Me</CardTitle>
                     </CardHeader>
                     <CardContent className="grid grid-cols-2 gap-4">
-                        <Link href="https://github.com" target="_blank" className="flex items-center gap-4 group">
+                        <Link href="https://github.com/elan026" target="_blank" className="flex items-center gap-4 group">
                            <Github className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors"/>
                            <span className="text-muted-foreground group-hover:text-foreground transition-colors">GitHub</span>
                         </Link>
