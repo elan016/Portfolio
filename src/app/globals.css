@@ -64,8 +64,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
-    scrollbar-width: none; /* Firefox */
+    @apply bg-background text-foreground;/* Firefox */
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
   }
 
