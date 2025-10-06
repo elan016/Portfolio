@@ -7,14 +7,20 @@ import { Footer } from '@/components/footer';
 
 export function LayoutWrapper({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000); // Show loader for 2 seconds
 
     return () => clearTimeout(timer);
   }, []);
+
+  if (!isClient) {
+    return <Loader />;
+  }
 
   return (
     <>
