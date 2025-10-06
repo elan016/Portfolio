@@ -50,8 +50,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn('dark', inter.variable, poppins.variable)}>
-      <body className="font-body antialiased bg-background text-foreground overflow-x-hidden">
+    <html lang="en" className={cn('dark overflow-x-hidden', inter.variable, poppins.variable)}>
+      <body className="font-body antialiased bg-background text-foreground">
         <BackgroundAnimation />
         <LayoutWrapper>{children}</LayoutWrapper>
         <Toaster />
