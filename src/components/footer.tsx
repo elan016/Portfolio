@@ -91,13 +91,13 @@ export function Footer() {
             </div>
         </div>
 
-        <div className="mt-12 border-t border-border/40 pt-8 flex flex-col sm:flex-row items-center justify-between">
+        <div className="mt-12 border-t border-border/40 pt-8 flex flex-col sm:flex-row items-center sm:justify-center">
              <p className="w-full text-center text-sm leading-loose text-muted-foreground sm:w-auto">
                 &copy; {new Date().getFullYear()} elan026.dev
             </p>
             <button 
                 onClick={scrollToTop} 
-                className="mt-4 sm:mt-0 p-2 rounded-md border border-primary/20 bg-card/50 hover:bg-card/80 transition-colors"
+                className="mt-4 sm:mt-0 sm:absolute sm:right-0 p-2 rounded-md border border-primary/20 bg-card/50 hover:bg-card/80 transition-colors"
                 aria-label="Back to top"
             >
                 <ArrowUp className="h-5 w-5" />
