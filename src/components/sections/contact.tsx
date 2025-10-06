@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import { AnimatedSection } from '@/components/animated-section';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Github, Linkedin, Mail, Phone, MessageCircle } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { ContactForm } from '@/components/contact-form';
 
 export function ContactSection() {
   return (
@@ -14,31 +14,12 @@ export function ContactSection() {
               Get In Touch
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-xl">
-              Ready to discuss AI strategies, software architecture, or collaboration opportunities? Let's connect.
+              Have a project in mind, a question, or just want to connect? Send me a message.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-             <Card className="bg-card/60 backdrop-blur-sm border-primary/10 shadow-inner-glow">
-                <CardHeader>
-                    <CardTitle>Book a Consultation</CardTitle>
-                    <CardDescription>
-                        I'm available for consultations, mentorship, and project discussions. Let's connect to explore how we can work together.
-                    </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <ul className="list-disc list-inside space-y-2 text-muted-foreground mb-6">
-                        <li>Personalized 1:1 discussion</li>
-                        <li>Professional advice based on your needs</li>
-                        <li>Flexible scheduling options</li>
-                    </ul>
-                    <Button asChild size="lg" className="w-full">
-                        <Link href="mailto:elangokandhasamy76@gmail.com">
-                            <MessageCircle className="mr-2 h-5 w-5" /> Schedule a Meeting
-                        </Link>
-                    </Button>
-                </CardContent>
-            </Card>
+            <ContactForm />
             <div className="space-y-8">
                 <Card className="bg-card/60 backdrop-blur-sm border-primary/10 shadow-inner-glow">
                     <CardHeader>
