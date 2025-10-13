@@ -1,24 +1,38 @@
 
 [
   {
-    "title": "Speech-to-Text Web Application",
-    "description": "Converts live speech to text, with deep learning model improvements for accuracy. Built with Flask and the WebSpeech API.",
-    "tags": ["Flask", "WebSpeech API", "Python", "Deep Learning"],
-    "githubUrl": "",
-    "liveUrl": "https://elan.ds"
-  },
-  {
-    "title": "Plate Vision: ALPR",
-    "description": "An end-to-end detection pipeline for license plates using YOLOv5 for object detection and a custom CNN for optical character recognition.",
-    "tags": ["YOLOv5", "CNN", "Flask", "Python", "OCR"],
-    "githubUrl": "",
+    "title": "RAG_AI_Chatbot",
+    "description": "A Retrieval-Augmented Generation (RAG) chatbot built with Streamlit and LangChain. It allows you to upload a PDF, indexes its content using embeddings, and lets you ask questions about the document.",
+    "tags": ["Streamlit", "LangChain", "FAISS", "Ollama", "RAG"],
+    "githubUrl": "https://github.com/elan026/RAG_AI_Chatbot.git",
     "liveUrl": ""
   },
   {
-    "title": "AI-Based M-Sand Quality Monitoring",
-    "description": "Classifies M-Sand quality from images using a custom CNN model. Features a React frontend and a Flask backend.",
-    "tags": ["React", "Flask", "CNN", "Computer Vision"],
-    "githubUrl": "",
+    "title": "Speech to Text App",
+    "description": "A Progressive Web App that runs on a custom ML model trained on 100+ speech patterns. It converts speech to text and can also translate the output.",
+    "tags": ["Machine Learning", "PWA", "Speech Recognition", "Translation"],
+    "githubUrl": "https://github.com/elan026/S2T.git",
+    "liveUrl": ""
+  },
+  {
+    "title": "AI Resume Analyzer",
+    "description": "An AI-powered tool built with LangChain and Streamlit to help evaluate resumes against job descriptions. It extracts key skills, identifies strengths and weaknesses, and provides improvement suggestions.",
+    "tags": ["LangChain", "Streamlit", "OpenAI", "Hugging Face", "ATS"],
+    "githubUrl": "https://github.com/elan026/AI_Resume_Analyzer.git",
+    "liveUrl": ""
+  },
+  {
+    "title": "Plate Vision (ALPR)",
+    "description": "An Automatic License Plate Recognition (ALPR) system designed to detect and recognize license plates from images or video streams, combining ML models with a web interface for user interaction.",
+    "tags": ["CNN", "OCR", "Flask", "Python", "Machine Learning"],
+    "githubUrl": "https://github.com/elan026/Plate-Vision-ALPR-.git",
+    "liveUrl": ""
+  },
+  {
+    "title": "IBM HR Analytics",
+    "description": "An analysis of IBM's employee dataset to understand attrition patterns and identify key factors affecting it. Visualized through an interactive dashboard covering income, satisfaction, overtime, and more.",
+    "tags": ["Data Analysis", "Power BI", "HR Analytics", "Dashboard"],
+    "githubUrl": "https://github.com/elan026/IBM-HR-Analytics.git",
     "liveUrl": ""
   }
 ]
