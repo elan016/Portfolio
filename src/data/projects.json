@@ -3,12 +3,12 @@
   {
     "title": "RAG_AI_Chatbot",
     "shortDescription": "A RAG chatbot built with Streamlit and LangChain that answers questions from an uploaded PDF.",
-    "description": "This project is a Retrieval-Augmented Generation (RAG) chatbot built with Streamlit, LangChain, FAISS, and Ollama. It allows you to upload a PDF, indexes its content using embeddings, and lets you ask questions about the document.",
+    "description": "This project is a Retrieval-Augmented Generation (RAG) chatbot built with Streamlit, LangChain, FAISS, and Ollama. It allows you to upload a PDF, indexes its content using embeddings, and lets you ask questions about the document. It features PDF upload, text extraction, FAISS vector storage, and an interactive UI.",
     "tags": ["Streamlit", "LangChain", "FAISS", "Ollama", "RAG"],
     "githubUrl": "https://github.com/elan026/RAG_AI_Chatbot.git",
     "liveUrl": "",
-    "imageUrl": "https://picsum.photos/seed/ai-chatbot/600/400",
-    "imageHint": "chatbot interface"
+    "imageUrl": "https://opengraph.githubassets.com/1/elan026/RAG_AI_Chatbot",
+    "imageHint": "AI chatbot"
   },
   {
     "title": "Speech to Text App",
@@ -17,28 +17,28 @@
     "tags": ["Machine Learning", "PWA", "Speech Recognition", "Translation"],
     "githubUrl": "https://github.com/elan026/S2T.git",
     "liveUrl": "",
-    "imageUrl": "https://picsum.photos/seed/speech-ai/600/400",
-    "imageHint": "sound wave"
+    "imageUrl": "https://opengraph.githubassets.com/1/elan026/S2T",
+    "imageHint": "speech recognition"
   },
   {
     "title": "AI Resume Analyzer",
     "shortDescription": "An AI tool that evaluates resumes against job descriptions, providing an ATS-style analysis and feedback.",
-    "description": "An AI-powered tool built with LangChain and Streamlit to help evaluate resumes against job descriptions. It extracts key skills, identifies strengths and weaknesses, and provides improvement suggestions.",
+    "description": "An AI-powered tool built with LangChain and Streamlit to help evaluate resumes against job descriptions. It extracts key skills, identifies strengths and weaknesses, and provides improvement suggestions. It supports both online (OpenAI) and offline (Hugging Face) embeddings.",
     "tags": ["LangChain", "Streamlit", "OpenAI", "Hugging Face", "ATS"],
     "githubUrl": "https://github.com/elan026/AI_Resume_Analyzer.git",
     "liveUrl": "",
-    "imageUrl": "https://picsum.photos/seed/resume-scan/600/400",
-    "imageHint": "resume document"
+    "imageUrl": "https://opengraph.githubassets.com/1/elan026/AI_Resume_Analyzer",
+    "imageHint": "resume analysis"
   },
   {
     "title": "Plate Vision (ALPR)",
     "shortDescription": "An Automatic License Plate Recognition system using CNN and OCR to detect and read license plates.",
-    "description": "An Automatic License Plate Recognition (ALPR) system designed to detect and recognize license plates from images or video streams, combining ML models with a web interface for user interaction.",
+    "description": "An Automatic License Plate Recognition (ALPR) system designed to detect and recognize license plates from images or video streams, combining ML models with a web interface for user interaction. It features license plate detection, character recognition, a web interface, and database integration.",
     "tags": ["CNN", "OCR", "Flask", "Python", "Machine Learning"],
     "githubUrl": "https://github.com/elan026/Plate-Vision-ALPR-.git",
     "liveUrl": "",
-    "imageUrl": "https://picsum.photos/seed/license-plate-scan/600/400",
-    "imageHint": "license plate"
+    "imageUrl": "https://opengraph.githubassets.com/1/elan026/Plate-Vision-ALPR-",
+    "imageHint": "license plate recognition"
   },
   {
     "title": "IBM HR Analytics",
@@ -47,7 +47,7 @@
     "tags": ["Data Analysis", "Power BI", "HR Analytics", "Dashboard"],
     "githubUrl": "https://github.com/elan026/IBM-HR-Analytics.git",
     "liveUrl": "",
-    "imageUrl": "https://picsum.photos/seed/analytics-dashboard/600/400",
-    "imageHint": "data chart"
+    "imageUrl": "https://opengraph.githubassets.com/1/elan026/IBM-HR-Analytics",
+    "imageHint": "HR analytics dashboard"
   }
 ]
