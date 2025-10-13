@@ -7,7 +7,7 @@
     "tags": ["Streamlit", "LangChain", "FAISS", "Ollama", "RAG"],
     "githubUrl": "https://github.com/elan026/RAG_AI_Chatbot.git",
     "liveUrl": "",
-    "imageUrl": "https://picsum.photos/seed/project-rag/600/400",
+    "imageUrl": "https://picsum.photos/seed/ai-chatbot/600/400",
     "imageHint": "chatbot interface"
   },
   {
@@ -17,7 +17,7 @@
     "tags": ["Machine Learning", "PWA", "Speech Recognition", "Translation"],
     "githubUrl": "https://github.com/elan026/S2T.git",
     "liveUrl": "",
-    "imageUrl": "https://picsum.photos/seed/project-s2t/600/400",
+    "imageUrl": "https://picsum.photos/seed/speech-ai/600/400",
     "imageHint": "sound wave"
   },
   {
@@ -27,7 +27,7 @@
     "tags": ["LangChain", "Streamlit", "OpenAI", "Hugging Face", "ATS"],
     "githubUrl": "https://github.com/elan026/AI_Resume_Analyzer.git",
     "liveUrl": "",
-    "imageUrl": "https://picsum.photos/seed/project-resume/600/400",
+    "imageUrl": "https://picsum.photos/seed/resume-scan/600/400",
     "imageHint": "resume document"
   },
   {
@@ -37,7 +37,7 @@
     "tags": ["CNN", "OCR", "Flask", "Python", "Machine Learning"],
     "githubUrl": "https://github.com/elan026/Plate-Vision-ALPR-.git",
     "liveUrl": "",
-    "imageUrl": "https://picsum.photos/seed/project-alpr/600/400",
+    "imageUrl": "https://picsum.photos/seed/license-plate-scan/600/400",
     "imageHint": "license plate"
   },
   {
@@ -47,7 +47,7 @@
     "tags": ["Data Analysis", "Power BI", "HR Analytics", "Dashboard"],
     "githubUrl": "https://github.com/elan026/IBM-HR-Analytics.git",
     "liveUrl": "",
-    "imageUrl": "https://picsum.photos/seed/ibm-dashboard/600/400",
+    "imageUrl": "https://picsum.photos/seed/analytics-dashboard/600/400",
     "imageHint": "data chart"
   }
 ]
