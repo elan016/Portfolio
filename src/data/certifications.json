@@ -4,32 +4,24 @@
     "title": "Python 101 for Data Science",
     "issuer": "IBM / Cognitive Class",
     "url": "https://courses.cognitiveclass.ai/certificates/d99341bca67041bba6aca2bf94ed0baa",
-    "icon": "BrainCircuit",
-    "imageUrl": "https://picsum.photos/seed/cert1/600/400",
-    "imageHint": "data science certificate"
+    "icon": "BrainCircuit"
   },
   {
     "title": "Python",
     "issuer": "HackerRank",
     "url": "https://www.hackerrank.com/certificates/iframe/657d2ed794f6",
-    "icon": "Code",
-    "imageUrl": "https://picsum.photos/seed/cert2/600/400",
-    "imageHint": "coding certificate"
+    "icon": "Code"
   },
   {
     "title": "Data Analytics Virtual Experience",
     "issuer": "Deloitte / Forage",
     "url": "https://www.theforage.com/simulations/deloitte-au/data-analytics-s5zy",
-    "icon": "BarChart3",
-    "imageUrl": "https://picsum.photos/seed/cert3/600/400",
-    "imageHint": "analytics dashboard"
+    "icon": "BarChart3"
   },
   {
     "title": "Introduction to Generative AI",
     "issuer": "Simplilearn",
     "url": "https://simpli-web.app.link/e/7Ua8Bvyn2Wb",
-    "icon": "Sparkles",
-    "imageUrl": "https://picsum.photos/seed/cert4/600/400",
-    "imageHint": "AI certificate"
+    "icon": "Sparkles"
   }
 ]

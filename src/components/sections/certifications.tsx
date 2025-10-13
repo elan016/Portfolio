@@ -1,21 +1,27 @@
 'use client';
 
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { AnimatedSection } from '@/components/animated-section';
 import certifications from '@/data/certifications.json';
+import Link from 'next/link';
 import { Button } from '../ui/button';
-import { ExternalLink, Eye } from 'lucide-react';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { ExternalLink, BrainCircuit, Code, BarChart3, Sparkles } from 'lucide-react';
+import { type LucideProps } from 'lucide-react';
 
-type Certification = (typeof certifications)[0];
+const iconMap: { [key: string]: React.FC<LucideProps> } = {
+  BrainCircuit,
+  Code,
+  BarChart3,
+  Sparkles,
+};
 
 export function CertificationsSection() {
-  const [selectedCert, setSelectedCert] = useState<Certification | null>(null);
-
   return (
     <AnimatedSection>
       <section id="certifications" className="container py-24 sm:py-32">
@@ -27,75 +33,38 @@ export function CertificationsSection() {
             My professional certifications and credentials.
           </p>
         </div>
-        
-        <Dialog open={!!selectedCert} onOpenChange={(isOpen) => { if (!isOpen) setSelectedCert(null) }}>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-4xl mx-auto">
-            {certifications.map((cert) => (
-              <Card
-                key={cert.title}
-                className="flex flex-col bg-card/60 backdrop-blur-sm border border-primary/10 rounded-lg shadow-inner-glow transition-all duration-300 hover:border-primary/20 hover:shadow-lg overflow-hidden group"
-              >
-                 <DialogTrigger asChild>
-                    <button onClick={() => setSelectedCert(cert)} className="block w-full text-left">
-                        <div className="relative aspect-[16/10] overflow-hidden rounded-t-lg bg-black/50">
-                            <Image
-                                src={cert.imageUrl}
-                                alt={`Certificate for ${cert.title}`}
-                                fill
-                                className="object-contain group-hover:scale-105 transition-transform duration-300"
-                                data-ai-hint={cert.imageHint}
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                            />
-                        </div>
-                    </button>
-                </DialogTrigger>
-                <div className="flex flex-col flex-1">
-                  <CardHeader>
-                    <CardTitle className="font-headline text-xl mb-1">{cert.title}</CardTitle>
-                    <CardDescription>{cert.issuer}</CardDescription>
-                  </CardHeader>
-                  <CardFooter className="mt-auto">
-                      {cert.url && (
-                          <Button asChild variant="outline" size="sm">
-                              <Link href={cert.url} target="_blank">
-                                  View Credential <ExternalLink className="ml-2 h-4 w-4" />
-                              </Link>
-                          </Button>
-                      )}
-                  </CardFooter>
-                </div>
-              </Card>
-            ))}
-          </div>
-          
-          {selectedCert && (
-            <DialogContent className="max-w-4xl max-h-[90vh] flex flex-col">
-              <DialogHeader>
-                <DialogTitle className="font-headline text-2xl">{selectedCert.title}</DialogTitle>
-                <DialogDescription>{selectedCert.issuer}</DialogDescription>
-              </DialogHeader>
-              <div className="flex-1 overflow-y-auto pr-4">
-                <div className="relative aspect-video rounded-md overflow-hidden bg-black/50">
-                  <Image
-                    src={selectedCert.imageUrl}
-                    alt={`Certificate for ${selectedCert.title}`}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-              <div className="mt-4 flex justify-end">
-                {selectedCert.url && (
-                  <Button asChild>
-                    <Link href={selectedCert.url} target="_blank">
-                      <Eye className="mr-2 h-4 w-4" /> View Credential
-                    </Link>
-                  </Button>
-                )}
-              </div>
-            </DialogContent>
-          )}
-        </Dialog>
+        <Card className="max-w-2xl mx-auto bg-card/60 backdrop-blur-sm border-primary/10 shadow-inner-glow">
+          <CardContent className="pt-6">
+            <div className="divide-y divide-border">
+              {certifications.map((cert, index) => {
+                const IconComponent = iconMap[cert.icon] || Sparkles;
+                return (
+                  <div
+                    key={cert.title}
+                    className={`py-4 ${index === 0 ? 'pt-0' : ''} ${index === certifications.length - 1 ? 'pb-0' : ''}`}
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="bg-primary/10 p-2 rounded-full border border-primary/20">
+                          <IconComponent className="h-6 w-6 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-lg">{cert.title}</h3>
+                        <p className="text-muted-foreground">{cert.issuer}</p>
+                        {cert.url && (
+                            <Button asChild variant="link" className="px-0 h-auto mt-1">
+                                <Link href={cert.url} target="_blank">
+                                    View Credential <ExternalLink className="ml-2 h-4 w-4" />
+                                </Link>
+                            </Button>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </CardContent>
+        </Card>
       </section>
     </AnimatedSection>
   );
