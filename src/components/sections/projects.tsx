@@ -37,7 +37,7 @@ export function ProjectsSection() {
               >
                  <DialogTrigger asChild>
                     <button onClick={() => setSelectedProject(project)} className="block w-full">
-                        <div className="relative aspect-[16/10] overflow-hidden bg-black/50">
+                        <div className="relative aspect-[16/10] overflow-hidden bg-black/50 rounded-t-lg">
                             <Image
                                 src={project.imageUrl}
                                 alt={`Screenshot of ${project.title}`}
@@ -105,7 +105,7 @@ export function ProjectsSection() {
                   <div className="mt-auto pt-4">
                     {(selectedProject.liveUrl || selectedProject.githubUrl) && (
                       <Button asChild>
-                        <Link href={selectedProject.liveUrl || selectedProject.githubUrl!} target="_blank">
+                        <Link href={selected.liveUrl || selectedProject.githubUrl!} target="_blank">
                           <Eye className="mr-2 h-4 w-4" /> View Project
                         </Link>
                       </Button>
