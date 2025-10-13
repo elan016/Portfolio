@@ -37,12 +37,12 @@ export function ProjectsSection() {
               >
                  <DialogTrigger asChild>
                     <button onClick={() => setSelectedProject(project)} className="block w-full">
-                        <div className="relative aspect-[16/10] overflow-hidden">
+                        <div className="relative aspect-[16/10] overflow-hidden bg-black/50">
                             <Image
                                 src={project.imageUrl}
                                 alt={`Screenshot of ${project.title}`}
                                 fill
-                                className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                className="object-contain group-hover:scale-105 transition-transform duration-300"
                                 data-ai-hint={project.imageHint}
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             />
@@ -90,12 +90,12 @@ export function ProjectsSection() {
                 <DialogTitle className="font-headline text-2xl">{selectedProject.title}</DialogTitle>
               </DialogHeader>
               <div className="flex-1 overflow-y-auto grid grid-cols-1 md:grid-cols-2 gap-8 pr-4">
-                <div className="relative aspect-[16/10] rounded-md overflow-hidden">
+                <div className="relative aspect-[16/10] rounded-md overflow-hidden bg-black/50">
                   <Image
                     src={selectedProject.imageUrl}
                     alt={`Screenshot of ${selectedProject.title}`}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
                 <div className="flex flex-col">
