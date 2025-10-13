@@ -2,47 +2,52 @@
 [
   {
     "title": "RAG_AI_Chatbot",
-    "description": "A Retrieval-Augmented Generation (RAG) chatbot built with Streamlit and LangChain. It allows you to upload a PDF, indexes its content using embeddings, and lets you ask questions about the document.",
+    "shortDescription": "A RAG chatbot built with Streamlit and LangChain that answers questions from an uploaded PDF.",
+    "description": "This project is a Retrieval-Augmented Generation (RAG) chatbot built with Streamlit, LangChain, FAISS, and Ollama. It allows you to upload a PDF, indexes its content using embeddings, and lets you ask questions about the document.",
     "tags": ["Streamlit", "LangChain", "FAISS", "Ollama", "RAG"],
     "githubUrl": "https://github.com/elan026/RAG_AI_Chatbot.git",
     "liveUrl": "",
-    "imageUrl": "https://picsum.photos/seed/project-rag/400/250",
+    "imageUrl": "https://picsum.photos/seed/project-rag/600/400",
     "imageHint": "chatbot interface"
   },
   {
     "title": "Speech to Text App",
+    "shortDescription": "A Progressive Web App that converts speech to text and translates it, powered by a custom ML model.",
     "description": "A Progressive Web App that runs on a custom ML model trained on 100+ speech patterns. It converts speech to text and can also translate the output.",
     "tags": ["Machine Learning", "PWA", "Speech Recognition", "Translation"],
     "githubUrl": "https://github.com/elan026/S2T.git",
     "liveUrl": "",
-    "imageUrl": "https://picsum.photos/seed/project-s2t/400/250",
+    "imageUrl": "https://picsum.photos/seed/project-s2t/600/400",
     "imageHint": "sound wave"
   },
   {
     "title": "AI Resume Analyzer",
+    "shortDescription": "An AI tool that evaluates resumes against job descriptions, providing an ATS-style analysis and feedback.",
     "description": "An AI-powered tool built with LangChain and Streamlit to help evaluate resumes against job descriptions. It extracts key skills, identifies strengths and weaknesses, and provides improvement suggestions.",
     "tags": ["LangChain", "Streamlit", "OpenAI", "Hugging Face", "ATS"],
     "githubUrl": "https://github.com/elan026/AI_Resume_Analyzer.git",
     "liveUrl": "",
-    "imageUrl": "https://picsum.photos/seed/project-resume/400/250",
+    "imageUrl": "https://picsum.photos/seed/project-resume/600/400",
     "imageHint": "resume document"
   },
   {
     "title": "Plate Vision (ALPR)",
+    "shortDescription": "An Automatic License Plate Recognition system using CNN and OCR to detect and read license plates.",
     "description": "An Automatic License Plate Recognition (ALPR) system designed to detect and recognize license plates from images or video streams, combining ML models with a web interface for user interaction.",
     "tags": ["CNN", "OCR", "Flask", "Python", "Machine Learning"],
     "githubUrl": "https://github.com/elan026/Plate-Vision-ALPR-.git",
     "liveUrl": "",
-    "imageUrl": "https://picsum.photos/seed/project-alpr/400/250",
+    "imageUrl": "https://picsum.photos/seed/project-alpr/600/400",
     "imageHint": "license plate"
   },
   {
     "title": "IBM HR Analytics",
+    "shortDescription": "An interactive Power BI dashboard visualizing employee attrition patterns and key influencing factors.",
     "description": "An analysis of IBM's employee dataset to understand attrition patterns and identify key factors affecting it. Visualized through an interactive dashboard covering income, satisfaction, overtime, and more.",
     "tags": ["Data Analysis", "Power BI", "HR Analytics", "Dashboard"],
     "githubUrl": "https://github.com/elan026/IBM-HR-Analytics.git",
     "liveUrl": "",
-    "imageUrl": "https://picsum.photos/seed/project-analytics/400/250",
+    "imageUrl": "https://picsum.photos/seed/project-analytics/600/400",
     "imageHint": "data chart"
   }
 ]
