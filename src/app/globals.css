@@ -74,20 +74,6 @@
 }
 
 @layer components {
-  .loader {
-    animation: zoom-in-out 1.5s ease-in-out infinite;
-  }
-
-  @keyframes zoom-in-out {
-    0%,
-    100% {
-      transform: scale(0.8);
-    }
-    50% {
-      transform: scale(1.5);
-    }
-  }
-
   .background-animation {
     @apply fixed top-0 left-0 w-full h-full -z-10 overflow-hidden pointer-events-none;
   }
@@ -170,5 +156,150 @@
       589px 692px #FFF, 263px 1100px #FFF, 1539px 28px #FFF, 1218px 461px #FFF, 1899px 490px #FFF,
       1365px 1845px #FFF, 1525px 446px #FFF, 948px 1583px #FFF, 220px 143px #FFF, 1156px 1201px #FFF;
     animation: animStar 65s linear infinite;
+  }
+
+  .loader-ball-1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: rotate(45deg) translate(-50%, -50%);
+  }
+  .loader-ball-1 > div {
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border-radius: 50%;
+  }
+  .loader-ball-1 .balls-1 {
+    animation: anm-bl-1-a 1s ease-in-out infinite;
+    top: -20px;
+    left: -20px;
+  }
+  .loader-ball-1 .balls-2 {
+    animation: anm-bl-1-b 1s ease-in-out infinite;
+    top: -20px;
+    left: 0;
+  }
+  .loader-ball-1 .balls-3 {
+    animation: anm-bl-1-c 1s ease-in-out infinite;
+    top: -20px;
+    left: 20px;
+  }
+  .loader-ball-1 .balls-4 {
+    animation: anm-bl-1-d 1s ease-in-out infinite;
+    top: 0;
+    left: -20px;
+  }
+  .loader-ball-1 .balls-5 {
+    animation: anm-bl-1-e 1s ease-in-out infinite;
+    top: 0;
+    left: 0;
+  }
+  .loader-ball-1 .balls-6 {
+    animation: anm-bl-1-f 1s ease-in-out infinite;
+    top: 0;
+    left: 20px;
+  }
+  .loader-ball-1 .balls-7 {
+    animation: anm-bl-1-g 1s ease-in-out infinite;
+    top: 20px;
+    left: -20px;
+  }
+  .loader-ball-1 .balls-8 {
+    animation: anm-bl-1-h 1s ease-in-out infinite;
+    top: 20px;
+    left: 0;
+  }
+  .loader-ball-1 .balls-9 {
+    animation: anm-bl-1-i 1s ease-in-out infinite;
+    top: 20px;
+    left: 20px;
+  }
+  @keyframes anm-bl-1-a {
+    50% {
+      top: 0;
+      left: -20px;
+    }
+    100% {
+      top: 0;
+      left: -20px;
+    }
+  }
+  @keyframes anm-bl-1-b {
+    50% {
+      top: -20px;
+      left: -20px;
+    }
+    100% {
+      top: -20px;
+      left: -20px;
+    }
+  }
+  @keyframes anm-bl-1-c {
+    50% {
+      top: -20px;
+      left: 0;
+    }
+    100% {
+      top: -20px;
+      left: 0;
+    }
+  }
+  @keyframes anm-bl-1-d {
+    50% {
+      top: 20px;
+      left: -20px;
+    }
+    100% {
+      top: 20px;
+      left: -20px;
+    }
+  }
+  @keyframes anm-bl-1-e {
+    /* No animation needed for the center ball, but the keyframe is required */
+  }
+  @keyframes anm-bl-1-f {
+    50% {
+      top: -20px;
+      left: 20px;
+    }
+    100% {
+      top: -20px;
+      left: 20px;
+    }
+  }
+  @keyframes anm-bl-1-g {
+    50% {
+      top: 20px;
+      left: 0;
+    }
+    100% {
+      top: 20px;
+      left: 0;
+    }
+  }
+  @keyframes anm-bl-1-h {
+    50% {
+      top: 20px;
+      left: 20px;
+    }
+    100% {
+      top: 20px;
+      left: 20px;
+    }
+  }
+  @keyframes anm-bl-1-i {
+    50% {
+      top: 0;
+      left: 20px;
+    }
+    100% {
+      top: 0;
+      left: 20px;
+    }
   }
 }
