@@ -5,34 +5,44 @@
     "description": "A Retrieval-Augmented Generation (RAG) chatbot built with Streamlit and LangChain. It allows you to upload a PDF, indexes its content using embeddings, and lets you ask questions about the document.",
     "tags": ["Streamlit", "LangChain", "FAISS", "Ollama", "RAG"],
     "githubUrl": "https://github.com/elan026/RAG_AI_Chatbot.git",
-    "liveUrl": ""
+    "liveUrl": "",
+    "imageUrl": "https://picsum.photos/seed/project-rag/400/250",
+    "imageHint": "chatbot interface"
   },
   {
     "title": "Speech to Text App",
     "description": "A Progressive Web App that runs on a custom ML model trained on 100+ speech patterns. It converts speech to text and can also translate the output.",
     "tags": ["Machine Learning", "PWA", "Speech Recognition", "Translation"],
     "githubUrl": "https://github.com/elan026/S2T.git",
-    "liveUrl": ""
+    "liveUrl": "",
+    "imageUrl": "https://picsum.photos/seed/project-s2t/400/250",
+    "imageHint": "sound wave"
   },
   {
     "title": "AI Resume Analyzer",
     "description": "An AI-powered tool built with LangChain and Streamlit to help evaluate resumes against job descriptions. It extracts key skills, identifies strengths and weaknesses, and provides improvement suggestions.",
     "tags": ["LangChain", "Streamlit", "OpenAI", "Hugging Face", "ATS"],
     "githubUrl": "https://github.com/elan026/AI_Resume_Analyzer.git",
-    "liveUrl": ""
+    "liveUrl": "",
+    "imageUrl": "https://picsum.photos/seed/project-resume/400/250",
+    "imageHint": "resume document"
   },
   {
     "title": "Plate Vision (ALPR)",
     "description": "An Automatic License Plate Recognition (ALPR) system designed to detect and recognize license plates from images or video streams, combining ML models with a web interface for user interaction.",
     "tags": ["CNN", "OCR", "Flask", "Python", "Machine Learning"],
     "githubUrl": "https://github.com/elan026/Plate-Vision-ALPR-.git",
-    "liveUrl": ""
+    "liveUrl": "",
+    "imageUrl": "https://picsum.photos/seed/project-alpr/400/250",
+    "imageHint": "license plate"
   },
   {
     "title": "IBM HR Analytics",
     "description": "An analysis of IBM's employee dataset to understand attrition patterns and identify key factors affecting it. Visualized through an interactive dashboard covering income, satisfaction, overtime, and more.",
     "tags": ["Data Analysis", "Power BI", "HR Analytics", "Dashboard"],
     "githubUrl": "https://github.com/elan026/IBM-HR-Analytics.git",
-    "liveUrl": ""
+    "liveUrl": "",
+    "imageUrl": "https://picsum.photos/seed/project-analytics/400/250",
+    "imageHint": "data chart"
   }
 ]

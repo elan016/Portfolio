@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { AnimatedSection } from '@/components/animated-section';
@@ -24,34 +25,46 @@ export function ProjectsSection() {
                 key={project.title}
                 className="flex flex-col bg-card/60 backdrop-blur-sm border border-primary/10 rounded-lg shadow-inner-glow transition-all duration-300 hover:border-primary/20 hover:shadow-lg overflow-hidden group"
               >
-                <CardHeader>
-                  <CardTitle className="font-headline text-2xl mb-2">{project.title}</CardTitle>
-                </CardHeader>
-                <div className="flex flex-col flex-1 p-6 pt-0">
-                  <CardDescription className="flex-1">{project.description}</CardDescription>
-                  <div className="flex flex-wrap gap-2 my-4">
-                    {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="bg-secondary/70">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                  <CardFooter className="p-0 pt-4 flex justify-between">
-                    {project.githubUrl && (
-                        <Button asChild variant="outline">
-                        <Link href={project.githubUrl} target="_blank">
-                            <Code className="mr-2 h-4 w-4" /> Code
-                        </Link>
-                        </Button>
-                    )}
-                    {project.liveUrl && (
-                        <Button asChild>
-                        <Link href={project.liveUrl} target="_blank">
-                            <Eye className="mr-2 h-4 w-4" /> Live Demo
-                        </Link>
-                        </Button>
-                    )}
-                  </CardFooter>
+                <div className="relative aspect-[16/10] overflow-hidden">
+                   <Image
+                      src={project.imageUrl}
+                      alt={`Screenshot of ${project.title}`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-ai-hint={project.imageHint}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                </div>
+                <div className="flex flex-col flex-1">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-2xl mb-2">{project.title}</CardTitle>
+                    </CardHeader>
+                    <div className="flex flex-col flex-1 p-6 pt-0">
+                    <CardDescription className="flex-1">{project.description}</CardDescription>
+                    <div className="flex flex-wrap gap-2 my-4">
+                        {project.tags.map((tag) => (
+                        <Badge key={tag} variant="secondary" className="bg-secondary/70">
+                            {tag}
+                        </Badge>
+                        ))}
+                    </div>
+                    <CardFooter className="p-0 pt-4 flex justify-between">
+                        {project.githubUrl && (
+                            <Button asChild variant="outline">
+                            <Link href={project.githubUrl} target="_blank">
+                                <Code className="mr-2 h-4 w-4" /> Code
+                            </Link>
+                            </Button>
+                        )}
+                        {project.liveUrl && (
+                            <Button asChild>
+                            <Link href={project.liveUrl} target="_blank">
+                                <Eye className="mr-2 h-4 w-4" /> Live Demo
+                            </Link>
+                            </Button>
+                        )}
+                    </CardFooter>
+                    </div>
                 </div>
               </Card>
           ))}
