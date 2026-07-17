@@ -80,7 +80,7 @@ export function Footer() {
                             <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors"/>
                         </Link>
                     </div>
-                    <Link href="mailto:elangokandhasamy76@gmail.com" className="flex items-center gap-3 group">
+                    <Link href="mailto:elangokandhasamy284@gmail.com" className="flex items-center gap-3 group">
                         <Mail className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors"/>
                         <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Email me</span>
                     </Link>

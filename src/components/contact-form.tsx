@@ -89,7 +89,7 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="bg-card/60 backdrop-blur-sm border-primary/10 shadow-inner-glow">
+    <Card className="glass-card w-full">
       <CardHeader>
         <CardTitle>Contact Me</CardTitle>
         <CardDescription>

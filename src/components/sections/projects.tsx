@@ -6,78 +6,113 @@ import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { AnimatedSection } from '@/components/animated-section';
-import projects from '@/data/projects.json';
-import { Button } from '../ui/button';
-import { Code, Eye } from 'lucide-react';
+import { projectsData } from '@/data/projects';
+import { Button } from '@/components/ui/button';
+import { Code, Eye, Sparkles, CheckCircle2 } from 'lucide-react';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
-type Project = (typeof projects)[0];
+interface Project {
+  title: string;
+  shortDescription: string;
+  description: string;
+  tags: string[];
+  githubUrl: string;
+  liveUrl: string;
+  imageUrl: string;
+  imageHint: string;
+  features?: string[];
+}
 
 export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const projects: Project[] = projectsData as Project[];
 
   return (
     <AnimatedSection>
-      <section id="projects" className="container py-24 sm:py-32">
-        <div className="text-center mb-12">
+      <section id="projects" className="container py-24 sm:py-32 relative overflow-hidden">
+        <div className="absolute top-1/4 right-10 w-72 h-72 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+
+        <div className="text-center mb-16">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Projects
+            Featured Projects
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-xl">
-            Here are some of the projects I've worked on.
-          </p>
+          <div className="w-12 h-1 bg-primary mx-auto mt-4 rounded-full" />
         </div>
         
-        <Dialog open={!!selectedProject} onOpenChange={(isOpen) => { if (!isOpen) setSelectedProject(null) }}>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <Dialog open={!!selectedProject} onOpenChange={(isOpen) => { if (!isOpen) setSelectedProject(null); }}>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2 max-w-5xl mx-auto">
             {projects.map((project) => (
               <Card
                 key={project.title}
-                className="flex flex-col bg-card/60 backdrop-blur-sm border border-primary/10 rounded-lg shadow-inner-glow transition-all duration-300 hover:border-primary/20 hover:shadow-lg overflow-hidden group"
+                className="glass-card flex flex-col rounded-xl overflow-hidden group hover:border-primary/30"
               >
-                 <DialogTrigger asChild>
-                    <button onClick={() => setSelectedProject(project)} className="block w-full">
-                        <div className="relative aspect-[16/10] overflow-hidden bg-black/50 rounded-t-lg">
-                            <Image
-                                src={project.imageUrl}
-                                alt={`Screenshot of ${project.title}`}
-                                fill
-                                className="object-contain group-hover:scale-105 transition-transform duration-300"
-                                data-ai-hint={project.imageHint}
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            />
-                        </div>
-                    </button>
-                </DialogTrigger>
-                <div className="flex flex-col flex-1">
-                  <CardHeader>
-                    <CardTitle className="font-headline text-2xl mb-2">{project.title}</CardTitle>
-                  </CardHeader>
-                  <div className="flex flex-col flex-1 p-6 pt-0">
-                    <CardDescription className="flex-1">{project.shortDescription}</CardDescription>
-                    <div className="flex flex-wrap gap-2 my-4">
-                      {project.tags.map((tag) => (
-                        <Badge key={tag} variant="secondary" className="bg-secondary/70">
-                          {tag}
-                        </Badge>
-                      ))}
+                {/* Image Container with click to open dialog */}
+                <DialogTrigger asChild>
+                  <button 
+                    onClick={() => setSelectedProject(project)} 
+                    className="block w-full relative aspect-[16/9] overflow-hidden bg-black/50 border-b border-border/20 cursor-pointer"
+                    aria-label={`Open details for ${project.title}`}
+                  >
+                    <Image
+                      src={project.imageUrl}
+                      alt={`Screenshot of ${project.title}`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                      data-ai-hint={project.imageHint}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      priority={false}
+                    />
+                    <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <div className="bg-background/90 text-foreground px-4 py-2 rounded-lg border border-primary/20 text-xs font-semibold shadow-lg backdrop-blur-sm">
+                        View Detailed Spec
+                      </div>
                     </div>
-                    <CardFooter className="p-0 pt-4 flex justify-between">
-                      {project.githubUrl && (
-                        <Button asChild variant="outline">
-                          <Link href={project.githubUrl} target="_blank">
-                            <Code className="mr-2 h-4 w-4" /> Code
-                          </Link>
+                  </button>
+                </DialogTrigger>
+
+                <div className="flex flex-col flex-1 p-6 space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="font-headline text-xl font-bold group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground line-clamp-3 min-h-[60px]">
+                      {project.shortDescription}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-wrap gap-1.5 flex-1">
+                    {project.tags.map((tag) => (
+                      <Badge 
+                        key={tag} 
+                        variant="secondary" 
+                        className="bg-secondary/40 border border-border/30 hover:bg-primary/5 text-xs py-0.5 px-2 rounded"
+                      >
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+
+                  <div className="pt-4 border-t border-border/20 flex gap-4">
+                    {project.githubUrl && (
+                      <Button asChild variant="outline" size="sm" className="flex-1 gap-2 glass-card">
+                        <Link href={project.githubUrl} target="_blank">
+                          <Code className="h-4 w-4" /> Code
+                        </Link>
+                      </Button>
+                    )}
+                    {project.liveUrl ? (
+                      <Button asChild size="sm" className="flex-1 gap-2">
+                        <Link href={project.liveUrl} target="_blank">
+                          <Eye className="h-4 w-4" /> Live Demo
+                        </Link>
+                      </Button>
+                    ) : (
+                      <DialogTrigger asChild>
+                        <Button onClick={() => setSelectedProject(project)} size="sm" className="flex-1 gap-2">
+                          <Sparkles className="h-4 w-4" /> Learn More
                         </Button>
-                      )}
-                      {project.liveUrl && (
-                        <Button asChild>
-                          <Link href={project.liveUrl} target="_blank">
-                            <Eye className="mr-2 h-4 w-4" /> Live Demo
-                          </Link>
-                        </Button>
-                      )}
-                    </CardFooter>
+                      </DialogTrigger>
+                    )}
                   </div>
                 </div>
               </Card>
@@ -85,28 +120,65 @@ export function ProjectsSection() {
           </div>
           
           {selectedProject && (
-            <DialogContent className="max-w-4xl max-h-[90vh] flex flex-col">
+            <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto bg-background/95 backdrop-blur border border-primary/20">
               <DialogHeader>
-                <DialogTitle className="font-headline text-2xl">{selectedProject.title}</DialogTitle>
-              </DialogHeader>
-              <div className="flex-1 overflow-y-auto grid grid-cols-1 md:grid-cols-2 gap-8 pr-4">
-                <div className="relative aspect-[16/10] rounded-md overflow-hidden bg-black/50">
-                  <Image
-                    src={selectedProject.imageUrl}
-                    alt={`Screenshot of ${selectedProject.title}`}
-                    fill
-                    className="object-contain"
-                  />
+                <DialogTitle className="font-headline text-2xl font-bold flex items-center gap-2">
+                  <span>{selectedProject.title}</span>
+                </DialogTitle>
+                <div className="flex flex-wrap gap-1.5 pt-2">
+                  {selectedProject.tags.map((tag) => (
+                    <Badge key={tag} variant="secondary" className="bg-secondary/70">
+                      {tag}
+                    </Badge>
+                  ))}
                 </div>
-                <div className="flex flex-col">
-                  <DialogDescription className="text-base text-foreground mb-4">
-                    {selectedProject.description}
-                  </DialogDescription>
-                  <div className="mt-auto pt-4">
+              </DialogHeader>
+
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mt-4">
+                <div className="md:col-span-6">
+                  <div className="relative aspect-[16/10] rounded-lg overflow-hidden border border-border bg-black/50">
+                    <Image
+                      src={selectedProject.imageUrl}
+                      alt={`Screenshot of ${selectedProject.title}`}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+
+                <div className="md:col-span-6 flex flex-col justify-between space-y-6">
+                  <div className="space-y-4">
+                    <DialogDescription className="text-sm text-muted-foreground leading-relaxed">
+                      {selectedProject.description}
+                    </DialogDescription>
+                    
+                    {selectedProject.features && (
+                      <div className="space-y-2">
+                        <h4 className="text-sm font-bold text-foreground">Key Features:</h4>
+                        <ul className="space-y-1.5">
+                          {selectedProject.features.map((feature, idx) => (
+                            <li key={idx} className="flex gap-2 text-xs text-muted-foreground">
+                              <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                              <span>{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="flex gap-4 pt-4 border-t border-border/20">
+                    {selectedProject.githubUrl && (
+                      <Button asChild variant="outline" className="flex-1 gap-2 glass-card">
+                        <Link href={selectedProject.githubUrl} target="_blank">
+                          <Code className="h-4 w-4" /> Repository
+                        </Link>
+                      </Button>
+                    )}
                     {(selectedProject.liveUrl || selectedProject.githubUrl) && (
-                      <Button asChild>
-                        <Link href={selected.liveUrl || selectedProject.githubUrl!} target="_blank">
-                          <Eye className="mr-2 h-4 w-4" /> View Project
+                      <Button asChild className="flex-1 gap-2">
+                        <Link href={selectedProject.liveUrl || selectedProject.githubUrl} target="_blank">
+                          <Eye className="h-4 w-4" /> {selectedProject.liveUrl ? 'Live Demo' : 'View Code'}
                         </Link>
                       </Button>
                     )}
